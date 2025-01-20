@@ -57,7 +57,7 @@ const Loader = () => {
     return (
         <Content>
             <FaviconWrapper>
-                <img src="./src/assets/img/favicon.ico" alt="Loader Icon" />
+                <img src="./src/assets/img/favicon.png" alt="Loader Icon" />
             </FaviconWrapper>
             <Message>Cargando...</Message>
         </Content>
