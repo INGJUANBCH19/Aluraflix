@@ -6,8 +6,9 @@ const Content = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.9);  // Darker background for elegance
     color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
 `;
 
 const FaviconWrapper = styled.div`
@@ -17,14 +18,44 @@ const FaviconWrapper = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-    animation: spin 2s linear infinite;
+    animation: spin 2s ease-in-out infinite;
 
     @keyframes spin {
         0% {
             transform: rotate(0deg);
         }
+        50% {
+            transform: rotate(180deg);
+        }
         100% {
             transform: rotate(360deg);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid rgba(42, 122, 228, 0.7);  // Soft glow effect
+        border-radius: 50%;
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 0.7;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
         }
     }
 
@@ -32,23 +63,25 @@ const FaviconWrapper = styled.div`
         width: 80px;
         height: 80px;
         border-radius: 50%;
+        object-fit: cover;
     }
 `;
 
 const Message = styled.p`
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: 30px;
+    font-size: 20px;
     color: rgba(42, 122, 228, 1);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    animation: fadeInOut 1.5s ease-in-out infinite;
+    letter-spacing: 2px;
+    font-weight: 600;
+    animation: fadeInOut 2s ease-in-out infinite;
 
     @keyframes fadeInOut {
         0%, 100% {
             opacity: 1;
         }
         50% {
-            opacity: 0.5;
+            opacity: 0.7;
         }
     }
 `;
@@ -59,11 +92,9 @@ const Loader = () => {
             <FaviconWrapper>
                 <img src="./public/favicon.png" alt="Loader Icon" />
             </FaviconWrapper>
-            <Message>Cargando...</Message>
+            <Message>Loading...</Message>
         </Content>
     );
 };
 
 export default Loader;
-
-
