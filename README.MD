@@ -42,3 +42,42 @@ AluraFlix/
 │       └── NuevoVideo.jsx
 ├── package.json
 └── README.md
+
+---
+
+## 🔧 Configuración e Instalación
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/AluraFlix.git
+   cd AluraFlix
+
+   📜 Scripts Disponibles
+
+En el directorio del proyecto, puedes ejecutar:
+	•	npm run dev: Inicia el servidor de desarrollo.
+	•	npm run build: Construye la aplicación para producción.
+	•	npm run preview: Previsualiza la aplicación construida.
+
+    🖼️ Capturas de Pantalla
+
+Página Principal
+
+🌟 Contribuir
+
+¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto:
+	1.	Realiza un fork del repositorio.
+	2.	Crea una rama para tu nueva función (git checkout -b feature/nueva-funcion).
+	3.	Realiza los cambios y haz commit (git commit -m 'Añadir nueva función').
+	4.	Haz push a tu rama (git push origin feature/nueva-funcion).
+	5.	Abre un Pull Request.
+
+    📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más información.
+
+👨‍💻 Autor
+
+Ingeniero Juan Betin- Desarrollador web.
+Conéctate conmigo en LinkedIn.
