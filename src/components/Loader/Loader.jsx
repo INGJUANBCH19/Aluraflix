@@ -2,26 +2,22 @@ import styled from "styled-components";
 
 const Content = styled.div`
     min-height: 100vh;
-    padding-top: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
     background-color: rgba(0, 0, 0, 0.95);
     color: #fff;
-    @media screen and (max-width: 1024px) {
-        min-height: 70vh;
-    }
 `;
 
-const LoadingSpinner = styled.div`
-    width: 80px;
-    height: 80px;
-    border: 6px solid rgba(255, 255, 255, 0.2);
-    border-top: 6px solid #7cd6ec;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+const FaviconWrapper = styled.div`
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: spin 2s linear infinite;
 
     @keyframes spin {
         0% {
@@ -31,12 +27,18 @@ const LoadingSpinner = styled.div`
             transform: rotate(360deg);
         }
     }
+
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
 `;
 
 const Message = styled.p`
     margin-top: 20px;
     font-size: 18px;
-    color: #7cd6ec;
+    color: rgba(42, 122, 228, 1);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     animation: fadeInOut 1.5s ease-in-out infinite;
@@ -54,10 +56,14 @@ const Message = styled.p`
 const Loader = () => {
     return (
         <Content>
-            <LoadingSpinner></LoadingSpinner>
+            <FaviconWrapper>
+                <img src="./src/assets/favicon.ico" alt="Loader Icon" />
+            </FaviconWrapper>
             <Message>Cargando...</Message>
         </Content>
     );
 };
 
 export default Loader;
+
+
