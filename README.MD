@@ -50,7 +50,7 @@ AluraFlix/
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/AluraFlix.git
+   git clone https://github.com/INGJUANBCH19/Aluraflix.git
    cd AluraFlix
 
    📜 Scripts Disponibles
